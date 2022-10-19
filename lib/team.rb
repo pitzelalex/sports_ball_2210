@@ -31,4 +31,13 @@ class Team
     {"total_value" => total_value,
     "player_count" => player_count}
   end
+
+  def average_cost_of_player
+    total = total_value / @roster.count
+    "$#{total.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+    #(\d{3}) check every 3 characters
+    #(?=\d) ensures that the following characters are 3+. Stops if there isn't another complete set of 3 characters
+    #, '\\1,' \\1 is pattern group. this subs in the original pattern group with a comma appended
+    # further research required
+  end
 end
