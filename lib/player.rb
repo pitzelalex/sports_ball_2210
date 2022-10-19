@@ -9,4 +9,8 @@ class Player
     @total_cost = cost * length
     @nickname = nil
   end
+
+  def set_nickname!(input)
+    @nickname = input
+  end
 end
