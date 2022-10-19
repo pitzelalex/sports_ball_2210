@@ -1,6 +1,9 @@
 class Player
+  attr_reader :first_name, :last_name, :cost, :length
+
   def initialize(name,cost,length)
-    @name = name
+    @first_name = name.split.first
+    @last_name = name
     @cost = cost
     @length = length
   end
