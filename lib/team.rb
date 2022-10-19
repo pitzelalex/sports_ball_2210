@@ -40,4 +40,8 @@ class Team
     #, '\\1,' \\1 is pattern group. this subs in the original pattern group with a comma appended
     # further research required
   end
+
+  def players_by_last_name
+    @roster.map { |player| player.last_name }.sort.join(", ")
+  end
 end
