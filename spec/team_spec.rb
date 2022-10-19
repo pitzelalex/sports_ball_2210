@@ -19,6 +19,10 @@ describe Team do
     it 'has a home' do
       expect(@team.home).to eq("Los Angeles")
     end
+
+    it 'has a roster' do
+      expect(@team.roster).to eq([])
+    end
   end
 
 end
