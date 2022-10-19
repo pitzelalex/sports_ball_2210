@@ -6,4 +6,8 @@ class Team
     @home = home
     @roster = []
   end
+
+  def player_count
+    @roster.count
+  end
 end
