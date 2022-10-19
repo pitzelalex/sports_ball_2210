@@ -44,4 +44,20 @@ describe Team do
       expect(team.roster).to eq([player_1, player_2])
     end
   end
+
+  describe '#long_term_players' do
+    it 'returns array of all long term players' do
+      team = Team.new("Dodgers", "Los Angeles")
+      player_1 = Player.new("Michael Palledorous" , 1000000, 36)
+      player_2 = Player.new("Kenny DeNunez", 500000, 24)
+      player_3 = Player.new("Alan McClennan", 750000, 48)
+      player_4 = Player.new("Hamilton Porter", 100000, 12)
+      team.add_player(player_1)
+      team.add_player(player_2)
+      team.add_player(player_3)
+      team.add_player(player_4)
+
+      expect(team.long_term_players).to eq([player_1, player_3])
+    end
+  end
 end
