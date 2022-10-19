@@ -3,7 +3,7 @@ class Player
 
   def initialize(name,cost,length)
     @first_name = name.split.first
-    @last_name = name
+    @last_name = name.split.last
     @cost = cost
     @length = length
   end
