@@ -26,4 +26,9 @@ class Team
   def total_value
     @roster.sum { |player| player.total_cost }
   end
+
+  def details
+    {"total_value" => total_value,
+    "player_count" => player_count}
+  end
 end
