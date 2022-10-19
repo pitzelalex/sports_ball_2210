@@ -25,4 +25,11 @@ describe Team do
     end
   end
 
+  describe '#player_count' do
+    it 'counts the number of players on team' do
+      team = Team.new("Dodgers", "Los Angeles")
+
+      expect(team.player_count).to eq[0]
+    end
+  end
 end
